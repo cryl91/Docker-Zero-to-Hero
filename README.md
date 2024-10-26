@@ -63,10 +63,10 @@ To provide a better picture of files and folders that containers base images hav
 
     /root: is the home directory of the root user.
 ```
+    A Container wont share the above files and resources with other containers and thus there is a logical separation between containers. If these files and resources are shared then it will comprimise the security as a hacker can hack it.
 
 
-
-### Files and Folders that containers use from host operating system
+### Files and Folders that containers use from host operating system = The parts are all belonging to the kernel. 
 
 ```
     The host's file system: Docker containers can access the host file system using bind mounts, which allow the container to read and write files in the host file system.
@@ -126,7 +126,7 @@ There are three important things,
 
 #### Docker daemon
 
-The Docker daemon (dockerd) listens for Docker API requests and manages Docker objects such as images, containers, networks, and volumes. A daemon can also communicate with other daemons to manage Docker services.
+The Docker daemon (dockerd) listens for Docker API requests and acts on those requests and manages Docker objects such as images, containers, networks, and volumes. A daemon can also communicate with other daemons to manage Docker services.
 
 
 #### Docker client
